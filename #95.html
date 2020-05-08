@@ -1,0 +1,53 @@
+<!--
+
+- Crear un objeto que represente los datos de un participante de un juego. Definir las propiedades
+nombre
+puntos
+y los métodos:
+imprimir (mostrar el nombre de jugador y los puntos actuales)
+aumentarpuntos (permite incrementar la cantidad de puntos actuales del jugador)
+verificarsigano (mostrar un mensaje si los puntos superan a 1000)
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+const jugador={
+    nombre:'Jafet',
+    puntos:100,
+    imprimir(){
+    document.write('Nombre del jugador:'+this.nombre);
+    document.write('<br>');
+    document.write('Puntos que posee:'+this.puntos);
+    document.write('<br>');
+    },
+    aumentarpuntos(cant) {
+    this.puntos=this.puntos+cant;
+    },
+    verificarsigano() {
+    if (this.puntos>1000)
+        document.write('Gano<br>');
+    else
+        document.write('No gano<br>');
+    }
+};
+jugador.imprimir();
+jugador.aumentarpuntos(700);
+jugador.verificarsigano();
+jugador.aumentarpuntos(701);
+jugador.verificarsigano();  
+jugador.imprimir();
+
+</script>   
+</body>
+</html>
+
+
+
+
+
